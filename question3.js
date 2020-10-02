@@ -11,6 +11,7 @@ what it does and why.
 const kebabCase = function (str) {
     // your code here
 
+    //if str is not an empty string
     if (str != '') {
 
         //make all letters lowercase
@@ -36,6 +37,7 @@ const kebabCase = function (str) {
         //put everything in one string and return it
         return words.join('-');
     } else {
+        // if str is an empty string, return a certain string
         return 'This is an empty string!';
     }
 }
