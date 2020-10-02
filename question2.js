@@ -7,13 +7,11 @@
 const addSAnd20 = function (arr) {
     // your code here
     let newArr = arr.map(function(element) {
-        // for (let i = 0; i < arr.length; i++) {
             if (typeof(element) === 'string') {
                 return element + 's';
             } else if(typeof(element) === 'number') {
                 return element + 20;
             }
-        // }
     });
 
     console.log(newArr);
@@ -29,7 +27,3 @@ const addSAnd20 = function (arr) {
 addSAnd20([56, 'dog', 'apple', 'cheese', 45, 71]);
 addSAnd20([56, 45, 71, 90, 28, 67]);
 addSAnd20(['dog', 'apple', 'cheese']);
-
-
-// console.log(typeof(56) === 'number');
-// console.log(typeof('dog') === 'string');
