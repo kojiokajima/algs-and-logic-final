@@ -11,30 +11,33 @@ what it does and why.
 const kebabCase = function (str) {
     // your code here
 
-    //make all letters lowercase
-    let lowerCase = str.toLowerCase();
-    // console.log(lowerCase);
+    if (str != '') {
 
-    //split string into indivisual word
-    let words = lowerCase.split(' ');
-    // console.log(words);
-    // words = ['conding', 'is', 'fun']
+        //make all letters lowercase
+        let lowerCase = str.toLowerCase();
+    
+        //split string into indivisual word
+        let words = lowerCase.split(' ');
+    
+        for (let i = 0; i < words.length; i++) {
+            //slpit each words into characters
+            let chars = words[i].split('');
+            
+            //make the first letter uppercase
+            chars[0] = chars[0].toUpperCase();
 
-    for (let i = 0; i < words.length; i++) {
-        //make the first letter uppercase
-        let chars = words[i].split('');
-        // console.log(chars);
-        
-
-        chars[0] = chars[0].toUpperCase();
-        let joinedChars = chars.join('');
-        // console.log(joinedChars);
-
-        words[i] = joinedChars;
+            // combine all separated characters
+            let joinedChars = chars.join('');
+            
+            // replace each words
+            words[i] = joinedChars;
+        }
+    
+        //put everything in one string and return it
+        return words.join('-');
+    } else {
+        return 'This is an empty string!';
     }
-
-    //put everything in one string
-    return words.join('-');
 }
 
 // console.log((kebabCase('Coding Is Fun') === 'Coding-Is-Fun') ? "Test 1: Passing" : "Test 1: Failing");
@@ -45,3 +48,5 @@ const kebabCase = function (str) {
 
 
 console.log(kebabCase('Coding Is Fun'));
+console.log((kebabCase('this STrIng has Weird casing')));
+console.log((kebabCase('')));
