@@ -19,6 +19,7 @@ const snakeCaseArr = function (arr) {
         //split string into indivisual word
         let words = lowerCase.split(' ');
 
+        // combine all separated words
         let joinedWords = words.join('_');
 
         // push each snaked elements to the final array
@@ -37,4 +38,6 @@ const snakeCaseArr = function (arr) {
 
 // console.log((snakeCaseArr(['cats are CUTE', 'Dogs ARE cool']) === ['cats_are_cute', 'dogs_are_cool']) ? "Test 3: Passing" : "Test 3: Failing");
 
+console.log(snakeCaseArr(['Coding Is Fun']));
 console.log(snakeCaseArr(['Coding Is Fun', 'Dogs ARE cool']));
+console.log(snakeCaseArr(['cats are CUTE', 'Dogs ARE cool']));
